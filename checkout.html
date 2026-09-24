@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Checkout | GLAZEE</title>
+  <meta name="description" content="Complete your GLAZEE order securely." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#0d1f0f;--paper:#f2f9f4;--surface:#fff;--soft:#d4ead9;--line:#a8c9b0;--muted:#4a7a55;--accent:#1a7a40;--danger:#cc3333;--gold:#937f41}
+    *{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,sans-serif;background:var(--paper);color:var(--ink);min-height:100vh}button,input,select,textarea{font:inherit}.top{height:72px;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.1)}.brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;letter-spacing:.32em}.back{position:absolute;left:max(18px,calc((100vw - 1080px)/2));display:flex;align-items:center;gap:8px;color:var(--paper);text-decoration:none;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.page{width:min(1080px,100%);margin:auto;padding:42px 22px 72px}.heading{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,6vw,54px);line-height:1;margin-bottom:8px}.sub{color:var(--muted);font-size:13px;margin-bottom:30px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:start}.panel{background:var(--surface);border:1px solid var(--soft);border-radius:8px;padding:26px}.section-title{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:24px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--soft)}.section-title:first-child{margin-top:0}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.group{margin-bottom:14px}.label{font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}.req{color:var(--danger)}.input{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);outline:none}.input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(26,122,64,.1)}textarea.input{min-height:82px;resize:vertical}.radio-list{display:flex;flex-direction:column;gap:8px}.radio{display:flex;align-items:center;gap:12px;padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;background:var(--surface)}.radio.selected{border-color:var(--ink);background:var(--paper)}.radio input{accent-color:var(--accent);width:16px;height:16px}.radio-info{display:flex;flex:1;flex-direction:column;gap:2px}.radio-label{font-size:13px;font-weight:700}.radio-sub{font-size:10px;color:var(--muted)}.radio-price{font-size:13px;font-weight:800;white-space:nowrap}.pay-logo{display:inline-block;padding:3px 8px;border-radius:4px;color:#fff;font-size:11px;font-weight:800}.bkash{background:#e2136e}.cod{background:var(--accent)}.payment-box,.totals{background:var(--paper);border:1px solid var(--soft);border-radius:8px;padding:14px;margin-top:10px;font-size:12px;line-height:1.6}.amount{font-weight:800;margin-top:4px}.items{display:flex;flex-direction:column}.item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--soft)}.item:first-child{padding-top:0}.item img{width:64px;height:78px;object-fit:cover;background:var(--soft)}.item-name{font-size:12px;font-weight:800;text-transform:uppercase}.item-meta{font-size:10px;color:var(--muted);margin-top:4px}.item-price{font-size:13px;font-weight:900}.totals{margin-top:18px}.total-line{display:flex;justify-content:space-between;margin:4px 0}.grand{font-size:16px;font-weight:900;border-top:1px solid var(--line);padding-top:9px;margin-top:9px}.pay-now{margin-top:10px;padding:9px;background:rgba(26,122,64,.1);color:var(--accent);font-weight:800;border-radius:6px}.submit{width:100%;margin-top:16px;padding:17px;border:0;border-radius:999px;background:var(--gold);color:#fff;font-size:12px;font-weight:900;letter-spacing:.14em;cursor:pointer}.submit:disabled{opacity:.55;cursor:not-allowed}.status{min-height:20px;text-align:center;font-size:12px;font-weight:700;margin-top:10px}.invalid{border-color:var(--danger)!important;box-shadow:0 0 0 3px rgba(204,51,51,.1)!important}.empty,.success{text-align:center;padding:56px 24px}.empty h1,.success h1{font-family:'Cormorant Garamond',serif;font-size:38px;margin-bottom:10px}.empty p,.success p{color:var(--muted);line-height:1.7}.home-btn{display:inline-block;margin-top:22px;padding:14px 26px;background:var(--ink);color:var(--paper);text-decoration:none;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.12em}.success-mark{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:var(--accent);color:#fff;font-size:30px}@media(max-width:800px){.layout{grid-template-columns:1fr}.summary{order:-1}.page{padding:28px 14px 56px}.panel{padding:20px}.back{left:14px}.brand{font-size:20px}.back span{display:none}}@media(max-width:480px){.row{grid-template-columns:1fr}.item{grid-template-columns:56px 1fr}.item img{width:56px;height:70px}.item-price{grid-column:2}.top{height:64px}}
+  </style>
+</head>
+<body>
+  <header class="top"><a class="back" href="index.html" aria-label="Back to shop">← <span>Back to shop</span></a><div class="brand">GLAZEE</div></header>
+  <main class="page">
+    <div id="checkoutView">
+      <h1 class="heading">Checkout</h1><p class="sub">Complete your information to place the order.</p>
+      <div class="layout">
+        <section class="panel">
+          <div class="section-title">Delivery Information</div>
+          <div class="group"><div class="label">Your Name <span class="req">*</span></div><input class="input" id="ofName" type="text" placeholder="Full name" /></div>
+          <div class="group"><div class="label">Phone Number <span class="req">*</span></div><input class="input" id="ofPhone" type="tel" placeholder="01XXXXXXXXX" /></div>
+          <div class="group"><div class="label">Delivery Address <span class="req">*</span></div><textarea class="input" id="ofAddress" placeholder="Full delivery address..."></textarea></div>
+          <div id="singleOptions" class="row">
+            <div class="group"><div class="label">Size <span class="req">*</span></div><select class="input" id="ofSize"></select></div>
+            <div class="group"><div class="label">Quantity <span class="req">*</span></div><input class="input" id="ofQty" type="number" value="1" min="1" max="20" /></div>
+          </div>
+          <div class="section-title">Shipping Method</div>
+          <div class="radio-list">
+            <label class="radio selected"><input type="radio" name="shipping" value="inside" checked /><span class="radio-info"><span class="radio-label">Inside Chittagong</span></span><span class="radio-price">৳80</span></label>
+            <label class="radio"><input type="radio" name="shipping" value="outside" /><span class="radio-info"><span class="radio-label">Outside Chittagong</span></span><span class="radio-price">৳130</span></label>
+          </div>
+          <div class="section-title">Payment Type</div>
+          <div class="radio-list">
+            <label class="radio selected" id="payFull"><input type="radio" name="paytype" value="full" checked /><span class="radio-info"><span class="radio-label">Full Payment</span><span class="radio-sub">Pay the full amount now</span></span></label>
+            <label class="radio" id="payAdvance"><input type="radio" name="paytype" value="advance" /><span class="radio-info"><span class="radio-label">Advance Payment</span><span class="radio-sub">Pay delivery charge only</span></span></label>
+          </div>
+          <div class="section-title">Payment Method</div>
+          <div class="radio-list">
+            <label class="radio selected"><input type="radio" name="paymethod" value="bkash" checked /><span class="radio-info"><span class="radio-label"><span class="pay-logo bkash">bKash</span></span></span><span class="radio-price" style="color:#e2136e">01887906859</span></label>
+            <label class="radio"><input type="radio" name="paymethod" value="cod" /><span class="radio-info"><span class="radio-label"><span class="pay-logo cod">COD</span></span><span class="radio-sub">Cash on Delivery — pay at your door</span></span></label>
+          </div>
+          <div class="payment-box" id="paymentBox">Send money to: <strong>01887906859</strong> (bKash)<div class="amount" id="paymentAmount"></div></div>
+          <div class="group" id="senderGroup" style="margin-top:14px"><div class="label">আপনার Sender Number <span class="req">*</span> <span style="font-weight:400;text-transform:none;letter-spacing:0">(যে নম্বর থেকে টাকা পাঠাবেন)</span></div><input class="input" id="ofSenderNumber" type="tel" placeholder="01XXXXXXXXX" /></div>
+          <div class="group" id="transactionGroup"><div class="label">Transaction ID <span class="req">*</span> <span style="font-weight:400;text-transform:none;letter-spacing:0">(Payment করার পর)</span></div><input class="input" id="ofTransactionId" type="text" placeholder="e.g. 8KZ3M5P9" /></div>
+          <div class="group"><div class="label">Note (optional)</div><input class="input" id="ofNote" type="text" placeholder="Any special instructions..." /></div>
+        </section>
+        <aside class="panel summary"><div class="section-title">Your Order</div><div class="items" id="orderItems"></div><div class="totals" id="totals"></div><div class="status" id="orderStatus"></div><button class="submit" id="orderSubmitBtn">PLACE ORDER</button></aside>
+      </div>
+    </div>
+    <div class="empty" id="emptyView" hidden><h1>Your checkout is empty</h1><p>Add a product or cart items before checking out.</p><a class="home-btn" href="index.html">RETURN TO SHOP</a></div>
+    <div class="success" id="successView" hidden><div class="success-mark">✓</div><h1>Order Placed!</h1><p>Thank you! Your order has been received and will be processed shortly.<br>We'll contact you on your phone number.</p><a class="home-btn" href="index.html">CONTINUE SHOPPING</a></div>
+  </main>
+<script>
+const SB_URL='https://vmzuccjvznlgwgpfaeee.supabase.co';
+const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZtenVjY2p2em5sZ3dncGZhZWVlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYwMDg3MTYsImV4cCI6MjEwMTU4NDcxNn0.0GlyBQboL63oUL4EuRpvZB-DFWEcVKaNRIlrw7hflqw';
+const CONFIG={inside:80,outside:130};
+let checkout;
+try{checkout=JSON.parse(sessionStorage.getItem('glazee_checkout')||'null')}catch(e){checkout=null}
+let items=checkout&&Array.isArray(checkout.items)?checkout.items:[];
+const isCart=checkout&&checkout.type==='cart';
+const $=id=>document.getElementById(id);
+const money=n=>'৳'+Number(n||0).toLocaleString();
+const stripId=id=>String(id==null?'':id).replace(/^cloud-/,'');
+function productTotal(){if(isCart)return items.reduce((s,i)=>s+Number(i.price)*Number(i.qty||1),0);return items[0]?Number(items[0].price)*Math.max(1,parseInt($('ofQty').value)||1):0}
+function selected(name,fallback){return document.querySelector(`input[name="${name}"]:checked`)?.value||fallback}
+function renderItems(){
+  $('orderItems').innerHTML=items.map((i,idx)=>`<div class="item">${i.image?`<img src="${i.image}" alt="">`:'<div></div>'}<div><div class="item-name">${i.name||''}</div><div class="item-meta">${isCart?'Size: '+(i.size||'—')+' · Qty: '+(i.qty||1):(i.category||'')}</div></div><div class="item-price">${money(Number(i.price)*Number(isCart?i.qty||1:1))}</div></div>`).join('');
+}
+function updateTotal(){
+  document.querySelectorAll('.radio').forEach(c=>{const r=c.querySelector('input');c.classList.toggle('selected',!!r&&r.checked)});
+  const shipping=selected('shipping','inside'), paytype=selected('paytype','full'), method=selected('paymethod','bkash');
+  const subtotal=productTotal(), delivery=CONFIG[shipping], grand=subtotal+delivery, payNow=method==='cod'?0:(paytype==='full'?grand:delivery);
+  $('totals').innerHTML=`<div class="total-line"><span>Product</span><strong>${money(subtotal)}</strong></div><div class="total-line"><span>Delivery</span><strong>${money(delivery)}</strong></div><div class="total-line grand"><span>Grand Total</span><span>${money(grand)}</span></div><div class="pay-now">${method==='cod'?`Cash on Delivery — Pay ${money(grand)} at your door`:`Pay now: ${money(payNow)} — ${paytype==='full'?'Full Amount (Product + Delivery)':'Advance (Delivery Charge Only)'}`}</div>`;
+  $('paymentAmount').textContent=`Amount to send: ${money(payNow)}`;
+  const cod=method==='cod';$('paymentBox').hidden=cod;$('senderGroup').hidden=cod;$('transactionGroup').hidden=cod;$('payFull').style.display=cod?'none':'';$('payAdvance').style.display=cod?'none':'';
+}
+async function decrementStock(orderItems){
+  const H={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=representation'};
+  for(const it of orderItems){const id=stripId(it.id);if(!id)continue;try{const r=await fetch(`${SB_URL}/rest/v1/products?select=id,stock&id=eq.${id}&limit=1`,{headers:H});if(!r.ok)continue;const rows=await r.json();if(!rows[0]||rows[0].stock==null)continue;const next=Math.max(0,(parseInt(rows[0].stock)||0)-(parseInt(it.qty)||1));await fetch(`${SB_URL}/rest/v1/products?id=eq.${id}`,{method:'PATCH',headers:H,body:JSON.stringify({stock:next})})}catch(e){}}
+  localStorage.removeItem('glazee_products_v3');
+}
+async function submitOrder(){
+  document.querySelectorAll('.invalid').forEach(e=>e.classList.remove('invalid'));
+  const name=$('ofName').value.trim(),phone=$('ofPhone').value.trim(),address=$('ofAddress').value.trim(),note=$('ofNote').value.trim();
+  const method=selected('paymethod','bkash'),cod=method==='cod',sender=$('ofSenderNumber').value.trim(),trx=$('ofTransactionId').value.trim();
+  const required=[['ofName',name],['ofPhone',phone],['ofAddress',address]];if(!cod)required.push(['ofSenderNumber',sender],['ofTransactionId',trx]);const missing=required.filter(x=>!x[1]);
+  if(missing.length){missing.forEach(x=>$(x[0]).classList.add('invalid'));$('orderStatus').textContent='Please fill in all required fields marked in red';$('orderStatus').style.color='var(--danger)';$(missing[0][0]).focus();return}
+  const shipping=selected('shipping','inside'),paytype=selected('paytype','full'),delivery=CONFIG[shipping],subtotal=productTotal(),grand=subtotal+delivery;
+  const qty=isCart?items.reduce((s,i)=>s+Number(i.qty||1),0):Math.max(1,parseInt($('ofQty').value)||1);
+  const productName=isCart?(items.length===1?`${items[0].name} (×${items[0].qty||1})`:`Cart Order (${items.length} items)`):items[0].name;
+  const size=isCart?items.map(i=>`${i.name} ×${i.qty||1} (${i.size||'—'})`).join(', '):$('ofSize').value;
+  const cartNote=isCart?items.map(i=>`• ${i.name} (${i.size||'—'}) ×${i.qty||1} = ${money(Number(i.price)*Number(i.qty||1))}`).join('\n')+(note?'\n\n'+note:''):note;
+  const btn=$('orderSubmitBtn');btn.disabled=true;btn.textContent='PLACING ORDER...';$('orderStatus').textContent='';
+  try{const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);const res=await fetch(`${SB_URL}/rest/v1/orders`,{method:'POST',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({product_name:productName,product_id:isCart?'':String(items[0].id),size,quantity:qty,price:isCart?subtotal:Number(items[0].price),total:grand,delivery_charge:delivery,shipping_zone:shipping,payment_type:paytype,payment_method:method,amount_paid:cod?0:(paytype==='full'?grand:delivery),sender_number:sender,transaction_id:trx,customer_name:name,customer_phone:phone,customer_address:address,note:cartNote,status:'new'}),signal:controller.signal});clearTimeout(timer);if(!res.ok){const data=await res.json().catch(()=>({}));throw new Error(data.message||data.hint||'Order failed. Please try again.')}const stockItems=isCart?items.map(i=>({id:i.id,qty:i.qty})):[{id:items[0].id,qty}];await decrementStock(stockItems);if(isCart)localStorage.setItem('cs_cart','[]');sessionStorage.removeItem('glazee_checkout');$('checkoutView').hidden=true;$('successView').hidden=false;window.scrollTo(0,0)}catch(e){$('orderStatus').textContent='Connection error. Internet check করুন।';$('orderStatus').style.color='var(--danger)';btn.disabled=false;btn.textContent='PLACE ORDER'}
+}
+if(!items.length){$('checkoutView').hidden=true;$('emptyView').hidden=false}else{renderItems();if(isCart){$('singleOptions').hidden=true}else{const item=items[0],sizes=Array.isArray(item.sizes)&&item.sizes.length?item.sizes:[item.size||'Free Size'];$('ofSize').innerHTML=sizes.map(s=>`<option value="${s}">${s}</option>`).join('');if(item.size)$('ofSize').value=item.size}document.querySelectorAll('input[type=radio],#ofQty').forEach(el=>el.addEventListener('change',updateTotal));$('ofQty').addEventListener('input',updateTotal);$('orderSubmitBtn').addEventListener('click',submitOrder);updateTotal()}
+</script>
+</body>
+</html>
